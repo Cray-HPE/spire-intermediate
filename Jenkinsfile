@@ -7,4 +7,5 @@ dockerBuildPipeline {
  repository = "cray"
  imagePrefix = "cray"
         product = "csm"
+ githubPushRepo = "Cray-HPE/spire-intermediate"
 }
