@@ -1,4 +1,4 @@
-FROM dtr.dev.cray.com/baseos/alpine:3.11.5
+FROM arti.dev.cray.com/baseos-docker-master-local/alpine:3.13.2
 
 RUN apk add --no-cache curl unzip jq openssl
 
