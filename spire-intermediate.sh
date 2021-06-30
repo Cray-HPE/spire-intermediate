@@ -75,9 +75,10 @@ for NAMESPACE in $(echo $NAMESPACES | tr -d ']['); do
 
     /kubectl -n "$NAMESPACE" create secret generic "spire.${NAMESPACE}.ca-tls" \
       --from-file=./ca.crt --from-file=./tls.crt --from-file=./tls.key
+    echo "Completed creating intermediate certificates."
   fi
 done
 
 # Kill Istio sidecar
-echo "Completed creating intermediate certificates. Stopping Istio Sidecar."
+echo "Stopping Istio Sidecar."
 curl -X POST http://localhost:15020/quitquitquit
