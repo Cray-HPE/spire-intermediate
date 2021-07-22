@@ -1,4 +1,4 @@
-FROM arti.dev.cray.com/baseos-docker-master-local/alpine:3.13.4
+FROM artifactory.algol60.net/docker-remote/alpine:latest
 
 RUN apk add --no-cache curl unzip jq openssl
 
