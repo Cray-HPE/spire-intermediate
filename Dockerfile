@@ -1,6 +1,8 @@
-FROM artifactory.algol60.net/docker-remote/alpine:latest
+FROM artifactory.algol60.net/docker.io/library/alpine
 
-RUN apk add --no-cache curl unzip jq openssl
+RUN apk update && apk -U upgrade && \
+    apk add --upgrade --no-cache apk-tools curl unzip jq openssl && \
+    rm -rf /var/cache/apk/*
 
 RUN curl https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/linux/amd64/kubectl > /kubectl && chmod +x /kubectl
 
